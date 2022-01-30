@@ -39,14 +39,17 @@ a{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    max-height: 700px;
+    max-height: 865px;
     color: var(--white);
 }
 
 .header .nav{
-    width: 100%;
+    width: 100vw;
     height: 80px;
+    padding: 0px 7%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .header .nav .logo{
     font-size: 2rem;
@@ -93,7 +96,9 @@ a{
     letter-spacing: 13px;
     padding: 0px;
 }
-
+.header .hero .black-text .br{
+    display: none;
+}
 .header .scroll-down{
     width: 60px;
     height: 60px;
@@ -249,6 +254,16 @@ a{
 .work .box img{
     transition: .5s all;
 }
+.work .list .box a{
+    position: absolute;
+    left: 40;
+    top: 35%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    background: var(--orange);
+    border: 2px solid white;
+}
 .work .list .box p{
     width: inherit;
     height: inherit;
@@ -262,12 +277,13 @@ a{
     font-family: 'Raleway';
     font-weight: 800;
     position: absolute;
-    bottom: -100%;
+    bottom: 0%;
     left: 0px;
+    opacity: 0;
     transition: .3s all;
 }
 .work .box:hover > p{
-    bottom: 0;
+    opacity: 1;
 }
 
 .contact{
@@ -333,12 +349,12 @@ a{
 .contact .form span input:hover, .contact .form span textarea:hover{
     outline: 0px;
     border: 0px;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
 }
 .contact .form span input:focus, .contact .form span textarea:focus{
     outline: 0px;
     border: 0px;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
 }
 .contact .form .submit-outer{
     justify-content: center;
@@ -388,4 +404,35 @@ a{
 }
 .footer .last{
     border-top: 1px solid gray;
+}
+
+.sticky{
+    background: white;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+}
+.sticky .logo{
+    color: #000;
+}
+.sticky #menu a{
+    color: #000;
+}
+.blank{
+    width: 100%;
+    height: 80px;
+    background: red;
+    opacity: 0%;
+    display: none;
+}
+.blank.show{
+    display: block;
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .main .about img{
+        width: 270px;
+        height: 350px;
+    }
 }
