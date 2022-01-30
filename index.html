@@ -2,24 +2,27 @@
 <html>
     <head>
         <title>Adarsh | Photographer</title>
+        <meta name="theme-color" content="#FF9800">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/style.min.css" media="screen and (max-width:768px)">
     </head>
     <body>
+
+        
         <header class="header center">
-            <div class="nav center">
+
+            <div id="blank" class="blank"></div>
+            <div class="nav whit" id="nav">
                 <a href="#" class="logo">Adarsh<span>.</span></a>
 
-
+                <input type="checkbox" id="sb-open">
                 <label for="sb-open" id="sb-o-btn">
                     <div class="span a"></div>
                     <div class="span b"></div>
                     <div class="span c"></div>
                 </label>
-                <input type="checkbox" id="sb-open">
                 <nav class="menu" id="menu">
-                    <div class="blur"></div>
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Services</a>
@@ -30,7 +33,7 @@
             <div class="hero center">
                 <div class="row">
                     <h2 class="small-text">I'm Adarsh Chavhan</h2>
-                    <h1 class="black-text">PHOTOGRAPHER</h1>
+                    <h1 class="black-text">PHOTO<div class="br"></div>GRAPHER</h1>
                 </div>
             </div>
 
@@ -73,12 +76,12 @@
                 <div class="text"><h1 class="heading">MY WORK</h1></div>
                 <div class="list">
                     
-                    <div class="box"><img src="img/works/thumb/1.jpg"><p>Wedding Photography</p></div>
-                    <div class="box"><img src="img/works/thumb/2.jpg"><p>Potrait Photography</p></div>
-                    <div class="box"><img src="img/works/thumb/3.jpg"><p>Fashion Photography</p></div>
-                    <div class="box"><img src="img/works/thumb/4.jpg"><p>Travel Photography</p></div>
-                    <div class="box"><img src="img/works/thumb/5.jpg"><p>Anniversary Photography</p></div>
-                    <div class="box"><img src="img/works/thumb/6.jpg"><p>Event Photography</p></div>
+                    <div class="box"><img src="img/works/thumb/1.jpg"><p>Wedding Photography<a href="img/works/large/1.jpg" download="download">Download</a></p></div>
+                    <div class="box"><img src="img/works/thumb/2.jpg"><p>Potrait Photography<a href="img/works/large/2.jpg" download="download">Download</a></p></div>
+                    <div class="box"><img src="img/works/thumb/3.jpg"><p>Fashion Photography<a href="img/works/large/3.jpg" download="download">Download</a></p></div>
+                    <div class="box"><img src="img/works/thumb/4.jpg"><p>Travel Photography<a href="img/works/large/4.jpg" download="download">Download</a></p></div>
+                    <div class="box"><img src="img/works/thumb/5.jpg"><p>Anniversary Photography<a href="img/works/large/5.jpg" download="download">Download</a></p></div>
+                    <div class="box"><img src="img/works/thumb/6.jpg"><p>Event Photography<a href="img/works/large/6.jpg" download="download">Download</a></p></div>
     
                 </div>
             </div>
@@ -139,5 +142,23 @@
             </div>
         </footer>
 
+
+        <!----------------------------------->
+        <script>
+            let nav = document.getElementById('nav');
+            let blank = document.getElementById('blank');
+
+            window.onscroll = function(){stickyHeader()} ;
+
+            function stickyHeader(){
+                if(document.documentElement.scrollTop > 60){
+                    nav.className = "nav sticky";
+                    blank.className = "blank show";
+                }else{
+                    nav.className = "nav";
+                    blank.className = "blank";
+                }
+            }
+        </script>
     </body>
 </html>
