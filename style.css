@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --silver: #f5f5f5;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #666666;
+    --orange: #FF9800;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    user-select: none;
+}
+
+header, main, footer{
+    width: 100%;
+    max-width: 1920px;
+    /* max-height: 1080px; */
+    padding: 0 5%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../img/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    max-height: 865px;
+    color: var(--white);
+}
+
+.header .nav{
+    width: 100vw;
+    height: 80px;
+    padding: 0px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav .logo{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.header .nav .logo span{
+    color: var(--orange);
+}
+.header .nav .menu a{
+    padding: 15px;
+    color:var(--silver);
+    font-weight: 800;
+    position: relative;
+}
+.header .nav .menu a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    left:50%;
+    background: var(--orange);
+    transition: .2s all;
+}
+.header .nav .menu a:hover::before{
+    left: 0;
+    width: 100%;
+}
+.header .hero{
+    width: inherit;
+    height: 50%;
+    text-align: center;
+}
+
+.header .hero .small-text{
+    font-size: 1.5rem;
+    padding: 20px;
+    color: var(--silver);
+}
+
+.header .hero .black-text{
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 13px;
+    padding: 0px;
+}
+.header .hero .black-text .br{
+    display: none;
+}
+.header .scroll-down{
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.header .scroll-down:hover{
+    transform: scale(1.1);
+}
+
+#sb-open , #sb-close{
+    display: none;
+}
+
+.main{
+    background: var(--silver);
+}
+.main .heading{
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 40px;
+    padding: 10px 40px;
+    position: relative;
+}
+.main .heading::before{
+    content: "";
+    position: absolute;
+    background: var(--orange);
+    width: 100px;
+    height: 4px;
+    bottom: 0px;
+}
+.main div{
+    padding: 1% 0;
+}
+.about{
+    width: inherit;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.about img{
+    margin: 20px;
+}
+.about .text{
+    padding: 20px;
+}
+.about p{
+    font-family: 'Raleway';
+    font-weight: 500;
+    line-height: 30px;
+    color: #777;
+    font-size: 18px;
+    padding: 20px;
+}
+.about ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+.about ul li{
+    list-style: none;
+    text-align: center;
+}
+.about ul li h1{
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 40px;
+}
+.about ul li p{
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 17px;
+    color: #777;
+}
+.about .btn{
+    background: var(--orange);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px 40px;
+    margin: 20px;
+    border-radius: 30px;
+}
+
+
+.services{
+    width: 100%;
+    padding: 0 0px;
+}
+.services .text{
+    padding:0px;
+    margin: 0;
+}
+.services .list , .work .list{
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.services .list .box , .work .list .box{
+    width: 400px;
+    height: 280px;
+    margin:20px 0px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s all;
+    flex-shrink: 0;
+}
+.services .list .box img{
+    width: 400px;
+    height: 280px;
+    filter: grayscale(1);
+    transition: .5s all;
+}
+.services .list .box p{
+    width: inherit;
+    height: inherit;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Raleway';
+    font-weight: 800;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transition: .3s all;
+}
+
+.services .list .box:hover > img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.services .list .box:hover > p{
+    opacity: 0;
+    overflow: hidden;
+}
+.work{
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    background: #f4f4f4;
+}
+.work .box img{
+    transition: .5s all;
+}
+.work .list .box a{
+    position: absolute;
+    left: 40;
+    top: 35%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    background: var(--orange);
+    border: 2px solid white;
+}
+.work .list .box p{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9));
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    padding: 20px;
+    font-size: 22px;
+    font-family: 'Raleway';
+    font-weight: 800;
+    position: absolute;
+    bottom: 0%;
+    left: 0px;
+    opacity: 0;
+    transition: .3s all;
+}
+.work .box:hover > p{
+    opacity: 1;
+}
+
+.contact{
+    width: 100%;
+    height: 950px;
+    position: relative;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+.contact .photo{
+    width: 100%;
+    height: 600px;
+    background: url(../img/contact-bg.jpg);
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .text{
+    margin-bottom: 20px;
+}
+.contact .heading{
+    color: var(--white);
+}
+.contact .heading::before{
+    left: calc(50% - 50px);
+    background: var(--white);
+}
+
+.contact .form{
+    width: calc(100% - 200px);
+    height: auto;
+    margin: auto;
+    padding:10px 50px;
+    background: var(--silver);
+    position: absolute;
+    bottom: 20px;
+}
+.contact .form .row{
+    display: flex;
+}
+.contact .form span{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+.contact .form span label{
+    padding: 10px 0px;
+    font-weight: 700;
+}
+.contact .form span input, .contact .form span textarea{
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 0px;
+    border-bottom: 1px solid var(--gray);
+    background: transparent;
+    resize: none;
+}
+.contact .form span input:hover, .contact .form span textarea:hover{
+    outline: 0px;
+    border: 0px;
+    border-bottom: 1px solid var(--gray);
+}
+.contact .form span input:focus, .contact .form span textarea:focus{
+    outline: 0px;
+    border: 0px;
+    border-bottom: 1px solid var(--gray);
+}
+.contact .form .submit-outer{
+    justify-content: center;
+    align-items: center;
+}
+.contact .form .submit{
+    font-weight: 700;
+    color: var(--white);
+    background: var(--orange);
+    border: 0px;
+    padding: 15px 30px;
+    border-radius: 40px;
+    transition: .4 all;
+}
+.contact .form .submit:hover{
+    border: 0px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.1);
+}
+
+.footer{
+    width: 100%;
+    background: var(--silver);
+}
+.footer .row{
+    color: var(--black);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+}
+.footer .row h4{
+    font-weight: 400;
+    padding: 10px;
+}
+.footer .row .column{
+    padding: 10px 0px;
+}
+.footer .row nav{
+    display: flex;
+    
+}
+.footer .row nav a{
+    padding: 5px;
+}
+.footer .row nav svg{
+    width: 20px;
+}
+.footer .last{
+    border-top: 1px solid gray;
+}
+
+.sticky{
+    background: white;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+}
+.sticky .logo{
+    color: #000;
+}
+.sticky #menu a{
+    color: #000;
+}
+.blank{
+    width: 100%;
+    height: 80px;
+    background: red;
+    opacity: 0%;
+    display: none;
+}
+.blank.show{
+    display: block;
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .main .about img{
+        width: 270px;
+        height: 350px;
+    }
+}
