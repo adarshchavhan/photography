@@ -236,3 +236,19 @@
 .sticky #sb-o-btn .span{
     background: #000;
 }
+.header .hero .small-text{
+    font-size: 16px;
+}
+.header .hero .black-text{
+    font-size: 3.7em;
+}
+
+
+.about p{
+    font-family: 'Raleway';
+    font-weight: 500;
+    line-height: 30px;
+    color: #777;
+    font-size: 12px;
+    padding: 20px;
+}
