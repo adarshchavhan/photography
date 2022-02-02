@@ -97,6 +97,7 @@
     background: lemonchiffon;
 }
 .header .hero .black-text{
+    font-size: 3.5rem;
     letter-spacing: 4px;
     word-break: break-all;
 }
