@@ -1,238 +1,275 @@
-.main div{
-    padding:5% 0;
-}
-.header .logo{
-    position: fixed;
-}
-.header .nav{
-    height: 55px;
-}
-.header .nav .menu{
+@media only screen and (max-width: 576px) {
+  .header {
+    height: 60px;
+  }
+  .header .logo {
+    padding: 0px 15px;
+  }
+  .header section .nav {
     width: 100%;
     height: 0;
     position: fixed;
     top: 55px;
     left: 0;
-    background: rgba(255, 255, 255,1);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.1W);
-    transition: .2s ease-in-out;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease-in-out;
     overflow: hidden;
     z-index: 2;
-}
-.header .nav .menu a{
+  }
+  .header .nav a {
     display: block;
     text-align: center;
-    padding: 30px;
+    padding: 20px 20px;
     color: var(--black);
-}
-.header .nav .menu a::before{
+  }
+  .header section .nav a::before {
     content: "";
     position: absolute;
     bottom: 0;
     width: 0%;
     height: 100%;
-    left:0px;
+    left: 0px;
     background: var(--orange);
-    transition: .2s all;
+    transition: 0.2s all;
     z-index: -1;
-}
-
-#sb-o-btn{
+  }
+  .header.sticky #sb-o-btn div {
+    background: var(--black);
+  }
+  #sb-o-btn {
     width: 25px;
     height: 25px;
     position: fixed;
-    right: 20px;
+    right: 15px;
     z-index: 3;
-}
-#sb-o-btn div{
+  }
+  #sb-o-btn div {
     width: 100%;
     height: 3px;
     background-color: var(--white);
     display: block;
     margin: 5px 0px;
     border-radius: 10px;
-    transition: .3s all;
-}
+    transition: 0.3s all;
+  }
 
-#sb-open:checked ~ #menu{
-    height: 394px;
-}
-#sb-open:checked ~ #sb-o-btn{
+  #sb-open:checked ~ #nav {
+    height: 300px;
+  }
+  #sb-open:checked ~ #sb-o-btn {
     background: white;
     padding: 5px;
     width: 35px;
     height: 35px;
     border-radius: 11px;
-}
-#sb-open:checked ~ #sb-o-btn .span.a{
+    margin-right: 15px;
+    position: relative;
+  }
+  #sb-open:checked ~ #sb-o-btn .span.a {
     transform: rotate(45deg);
-    margin: 10px 0px;
     background: var(--black);
-}
-#sb-open:checked ~ #sb-o-btn .span.c{
+    position: absolute;
+    left: 0;
+    top: 16px;
+  }
+  #sb-open:checked ~ #sb-o-btn .span.c {
     transform: rotate(-45deg);
-    margin: -20px 0px;
     background: var(--black);
-}
-#sb-open:checked ~ #sb-o-btn .span.b{
+    position: absolute;
+    bottom: 11px;
+    left: 0px;
+  }
+  #sb-open:checked ~ #sb-o-btn .span.b {
     width: 0px;
     opacity: 0;
     overflow: hidden;
+  }
+  .main section {
+    padding: 10px 0;
+  }
+  .main .heading {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .main .heading::before {
+    width: 70px;
+    border-radius: 10px;
+  }
+  .main .about .text {
+    overflow: hidden;
+  }
+  .main .about p {
+    margin: 10px 5px;
+  }
+  .main .about ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .main .about ul li {
+    padding: 0;
+  }
+  .main .about .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .services .list {
+    padding: 15px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .main .services .list .box p {
+    font-size: 22px;
+  }
+  .main .works .list {
+    padding: 15px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .main .contact form {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .contact .photo {
+    width: calc(100% - 30px);
+    margin: 10px 15px;
+  }
+  .contact .form span input,
+  .contact .form span textarea {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+  }
+  .span {
+    transition: 0.5s ease-in-out;
+  }
+  .footer {
+    height: 200px;
+  }
+  .footer .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    padding: 15px;
+  }
+  .footer .row h4 {
+    padding: 10px 0;
+  }
+  .footer .row.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-.header .hero{
+
+@media only screen and (max-width: 768px) {
+  .hero {
     text-align: left;
-}
-.header .hero .small-text{
+  }
+  .hero .small-text {
     font-size: 1.5rem;
     position: relative;
-    padding-left: 60px ;
-}
-.header .hero .small-text::before{
+    padding-left: 60px;
+  }
+  .hero .small-text::before {
     content: "";
     position: absolute;
     width: 40px;
-    height: .5px;
+    height: 0.5px;
     bottom: 25px;
-    left:10px;
+    left: 10px;
     background: lemonchiffon;
-}
-.header .hero .black-text{
+  }
+  .hero .big-text {
     letter-spacing: 4px;
     word-break: break-all;
-}
-.header .hero .black-text .br{
+  }
+  .hero .big-text .br {
     display: block;
-}
-.main{
-    overflow: hidden;
-    padding: 0px;
-}
-.main .heading{
-    font-size: 2rem;
-    padding: 20px 10px;
-}
-.main .heading::before{
-    width: 60px;
-    bottom: 10px;
-}
-.main .about img{
+  }
+  .main .heading {
+    font-size: 1.9rem;
+    padding: 10px;
+    padding-top: 0;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about img {
     width: 270px;
     height: 350px;
     margin: auto;
-}
-.main .about{
-    flex-direction: column;
-    justify-content: center;
-}
-.main .about p{
+  }
+  .main .about p {
     font-size: 1rem;
-}
-.about .text{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.about p{
-    font-size: 18px;
-    padding: 10px;
-}
-.about ul{
-    display: flex;
-    flex-direction: column;
-}
-.about ul li{
-    margin: 5px;
-}
-.about .btn{
-    margin: auto;
-}
-
-.services .text, .work .text{
-    padding:20px;
-}
-.services .list .box , .work .list .box{
-    width: 320px;
-    height: 215px;
-}
-.services .list .box img{
-    width: 320px;
-    height: 215px;
-}
-
-.contact .photo{
-    width: 100%;
-    height: 300px;
-}
-
-.contact{
-    height: 920px;
-}
-.contact .form{
-    width: calc(100% - 60px);
-    bottom: 110px;
-    padding: 0px 20px;
-}
-.contact .form .row{
-    display: flex;
-    flex-direction: column;
-}
-.contact .form span{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 20px 10px;
+  }
+  .main .about .btn {
+    margin: 20px 10px;
+  }
+  .about .text {
     padding: 20px 0px;
-}
-.contact .form span label{
-    padding: 10px 0px;
-    font-weight: 700;
-}
-.contact .form span input, .contact .form span textarea{
-    padding: 15px 0px;
-    font-size: 1rem;
-    font-weight: 400;
-    border: 0px;
-    border-bottom: 1px solid var(--gray);
-    background: transparent;
-    resize: none;
-}
-.contact .form span input:hover, .contact .form span textarea:hover{
-    outline: 0px;
-    border: 0px;
-    border-bottom: 2px solid var(--gray);
-}
-.contact .form span input:focus, .contact .form span textarea:focus{
-    outline: 0px;
-    border: 0px;
-    border-bottom: 2px solid var(--gray);
-}
-.contact .form .submit-outer{
-    justify-content: center;
-    align-items: center;
-}
-.contact .form .submit{
-    font-weight: 700;
-    color: var(--white);
-    background: var(--orange);
-    border: 0px;
-    padding: 15px 30px;
-    border-radius: 40px;
-}
-
-.footer .row{
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-.footer .row h4{
-    padding: 5px 0px;
-}
-
-.footer .row.center, .footer .row.last{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .services .list .box p {
+    font-size: 12px;
+  }
+  .works .list {
+    width: 100%;
+    height: auto;
+    padding: 40px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vw;
+  }
+  .contact form .row {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.sticky #sb-o-btn .span{
-    background: #000;
+/* ----------------------------------------
+  Responsive Section
+-----------------------------------------*/
+section {
+  margin: auto;
+  padding: 15px 0;
+}
+@media (max-width: 576px) {
+  section {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  section {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  section {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  section {
+    width: 1320px;
+  }
 }
