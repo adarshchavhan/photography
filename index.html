@@ -1,96 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>John Photographer</title>
-        <meta name="theme-color" content="#FF9800">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="img/icons/favicon.png"/>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style.min.css" media="screen and (max-width:768px)">
-    </head>
-    <body>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#FF9800">
 
-        
-        <header class="header center">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.min.css">
+   <link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
 
-            <div id="blank" class="blank"></div>
-            <div class="nav whit" id="nav">
-                <a href="#" class="logo">John<span>.</span></a>
+   <title>John Photographer</title>
+</head>
+<body>
+   
+    <!-- Loader -->
+   <div class="loader">
+      <div></div>
+      <h2>J</h2>
+   </div>
+   <!-- Scroll To Top Button -->
+   <button class="scroll-btn top" onclick="window.scroll(0,0)">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M390.624 150.625L256 16L121.376 150.625l22.628 22.627l95.997-95.998v417.982h32V77.257l95.995 95.995l22.628-22.627z"/></svg>
+   </button>
 
-                <input type="checkbox" id="sb-open">
-                <label for="sb-open" id="sb-o-btn">
-                    <div class="span a"></div>
-                    <div class="span b"></div>
-                    <div class="span c"></div>
-                </label>
-                <nav class="menu" id="menu">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Works</a>
-                    <a href="#">Contact</a>
-                </nav>
+    <!-- Header Section -->
+   <header class="header contain">
+      <section>
+         <a href="#" class="logo">John<span>.</span></a>
+         <input type="checkbox" id="sb-open">
+         <label for="sb-open" id="sb-o-btn">
+           <div class="span a"></div>
+            <div class="span b"></div>
+            <div class="span c"></div>
+         </label>
+         <nav class="nav" id="nav">
+            <a href="#hero" class="home-label">Home</a>
+            <a href="#about" class="about-label">About</a>
+            <a href="#services">Services</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+         </nav>
+      </section>
+   </header>
+
+   <!-- Hero Section -->
+   <div class="hero contain" id="hero">
+      <section>
+         <h2 class="small-text">I'm John Doe</h2>
+         <b class="big-text">PHOTO<div class="br"></div>GRAPHER</b>
+      </section>
+      <button class="scroll-btn" onclick="window.scroll(0, innerHeight-65);">
+         <img src="img/icons/arrow-down.svg" width="25px" height="25px">
+      </button>
+   </div>
+   
+   <main class="main contain">
+
+         <!-- About Section -->
+         <section class="about"  id="about">
+            <img class="img span" src="img/about.jpg" width="400px" height="500px" alt="JHON PHOTO">
+            <div class="text">
+              <h1 class="heading span">About Me</h1>
+              <p class="span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+               <ul id="counter-outer">
+                  <li class="span">
+                     <h1 class="counter" data-target="15">15</h1>
+                     <p>AWARDS WON</p>
+                  </li>
+                  <li class="span">
+                     <h1 class="counter" data-target="50">50</h1>
+                     <p>PROJECTS DONE</p>
+                  </li>
+                  <li class="span">
+                     <h1 class="counter" data-target="45">45</h1>
+                     <p>HAPPY CLINETS</p>
+                  </li>
+                  <li class="span">
+                     <h1 class="counter" data-target="500">500</h1>
+                     <p>ALL SHOTS</p>
+                  </li>
+               </ul>
+               <a href="#contact" class="btn span">Contact Me</a>
             </div>
-            <div class="hero center">
-                <div class="row">
-                    <h2 class="small-text">I'm John Doe</h2>
-                    <h1 class="black-text">PHOTO<div class="br"></div>GRAPHER</h1>
-                </div>
-            </div>
+         </section>
 
-            <a href="#" class="scroll-down">
-                    <img src="img/icons/arrow-down.svg" width="25px" height="25px">
-            </a>
-        </header>
-
-        <main class="main">
-            <div class="about">
-                <img src="img/about.jpg" width="400px" height="500px" alt="JHON PHOTO" class="img">
-                <div class="text">
-                    <h1 class="heading">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <ul>
-                        <li><h1>15</h1><p>AWARDS WON</p></li>
-                        <li><h1>50</h1><p>PROJECTS DONE</p></li>
-                        <li><h1>45</h1><p>HAPPY CLINETS</p></li>
-                        <li><h1>5000</h1><p>ALL SHOTS</p></li>
-                    </ul>
-                    <a href="#work" class="btn">Contact Me</a>
-                </div>
+         <!-- Services Section -->
+         <section class="services" id="services">
+            <div class="text span"><h1 class="heading">What I Do?</h1></div>
+            <div class="list">
+                <div class="box span"><img src="img/service/1.jpg"><p>Wedding Photography</p></div>
+                <div class="box span"><img src="img/service/2.jpg"><p>Potrait Photography</p></div>
+                <div class="box span"><img src="img/service/3.jpg"><p>Fashion Photography</p></div>
+                <div class="box span"><img src="img/service/4.jpg"><p>Travel Photography</p></div>
+                <div class="box span"><img src="img/service/5.jpg"><p>Anniversary Photography</p></div>
+                <div class="box span"><img src="img/service/6.jpg"><p>Event Photography</p></div>
             </div>
-     
-            <div class="services" id="services">
-                <div class="text"><h1 class="heading">What I Do?</h1></div>
-                <div class="list">
-                    
-                    <div class="box"><img src="img/service/1.jpg"><p>Wedding Photography</p></div>
-                    <div class="box"><img src="img/service/2.jpg"><p>Potrait Photography</p></div>
-                    <div class="box"><img src="img/service/3.jpg"><p>Fashion Photography</p></div>
-                    <div class="box"><img src="img/service/4.jpg"><p>Travel Photography</p></div>
-                    <div class="box"><img src="img/service/5.jpg"><p>Anniversary Photography</p></div>
-                    <div class="box"><img src="img/service/6.jpg"><p>Event Photography</p></div>
+         </section>
+
+         <!-- Worls Section -->
+         <section class="works" id="works">
+            <div class="text span"><h1 class="heading">MY WORK</h1></div>
+            <div class="list">
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/1.jpg">
+                  <p>Wedding Photo</p>
+               </div>
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/2.jpg">
+                  <p>Potrait Photo</p>
+               </div>
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/3.jpg">
+                  <p>Fashion Photo</p>
+               </div>
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/4.jpg">
+                  <p>Travel Photo</p>
+               </div>
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/5.jpg">
+                  <p>Anniversary Photo</p>
+               </div>
+               <div class="box span">
+                  <img class="thumb" src="img/works/thumb/6.jpg">
+                  <p>Event Photo</p>
+               </div>
+            </div>
+         </section>
+
+         <!-- Contact Section -->
+         <section class="contact" id="contact">
+            <div class="photo span"><h1 class="heading">Contact Me</h1></div>
     
-                </div>
-            </div>
-    
-            <div class="work" id="work">
-                <div class="text"><h1 class="heading">MY WORK</h1></div>
-                <div class="list">
-                    
-                    <div class="box"><img src="img/works/thumb/1.jpg"><p>Wedding Photography<a href="img/works/large/1.jpg" download="download">Download</a></p></div>
-                    <div class="box"><img src="img/works/thumb/2.jpg"><p>Potrait Photography<a href="img/works/large/2.jpg" download="download">Download</a></p></div>
-                    <div class="box"><img src="img/works/thumb/3.jpg"><p>Fashion Photography<a href="img/works/large/3.jpg" download="download">Download</a></p></div>
-                    <div class="box"><img src="img/works/thumb/4.jpg"><p>Travel Photography<a href="img/works/large/4.jpg" download="download">Download</a></p></div>
-                    <div class="box"><img src="img/works/thumb/5.jpg"><p>Anniversary Photography<a href="img/works/large/5.jpg" download="download">Download</a></p></div>
-                    <div class="box"><img src="img/works/thumb/6.jpg"><p>Event Photography<a href="img/works/large/6.jpg" download="download">Download</a></p></div>
-    
-                </div>
-            </div>
-
-            <div class="contact">
-                <div class="photo"><h1 class="heading">Contact Me</h1></div>
-    
-                <form action="" class="form">
+                <form action="" class="form span">
                     <div class="row">
                         <span>
                             <label for="name">Name</label>
@@ -107,59 +150,50 @@
                     </span>
                     
                     <span class="submit-outer">
-                        <input type="submit" class="submit" value="Send Message">
+                        <input type="submit" class="submit" style="cursor: pointer;" value="Send Message">
                     </span>
                 </form>
+         </section>
+   </main>
+
+   <!-- Footer Section -->
+   <footer class="footer section">
+      <section>
+         <div class="row">
+            <div class="column">
+                <h3>Address</h3>
+                <h4>bori, Nagpur, Maharashtra - 441108</h4>
             </div>
-        </main>
-
-        <footer class="footer">
-            <div class="row">
-                <div class="column">
-                    <h3>Address</h3>
-                    <h4>bori, Nagpur, Maharashtra - 441108</h4>
-                </div>
-                <div class="column">
-                    <h3>Phone</h3>
-                    <h4>91 000 000 0000</h4>
-                </div>
-                <div class="column">
-                    <h3>Email</h3>
-                    <h4>yourmail@gmail.com</h4>
-                </div>
+            <div class="column">
+                <h3>Phone</h3>
+                <h4>91 000 000 0000</h4>
             </div>
-            
-            <div class="row center">
-                <nav>
-                    <a href="#"><img width="24px" height="24px" src="img/icons/facebook.svg"></a>
-                    <a href="#"><img width="24px" height="24px" src="img/icons/twitter.svg"></a>
-                    <a href="#"><img width="24px" height="24px" src="img/icons/instagram.svg"></a>
-                    <a href="#"><img width="24px" height="24px" src="img/icons/linkedin.svg"></a>
-                </nav>
+            <div class="column">
+                <h3>Email</h3>
+                <h4>yourmail@gmail.com</h4>
             </div>
+        </div>
 
-            <div class="row last">
-                <p class="copyrights">Developed by Adarsh Chavhan</p>
-            </div>
-        </footer>
+        <div class="row center">
+               <nav>
+                  <a href="#"><img width="24px" height="24px" src="img/icons/facebook.svg"></a>
+                  <a href="#"><img width="24px" height="24px" src="img/icons/twitter.svg"></a>
+                  <a href="#"><img width="24px" height="24px" src="img/icons/instagram.svg"></a>
+                  <a href="#"><img width="24px" height="24px" src="img/icons/linkedin.svg"></a>
+               </nav>
+         </div>
+
+         <div class="row center">
+               <p class="copyrights">Developed by Adarsh Chavhan</p>
+         </div>
+
+      </section>
+  </footer>
 
 
-        <!----------------------------------->
-        <script>
-            let nav = document.getElementById('nav');
-            let blank = document.getElementById('blank');
 
-            window.onscroll = function(){stickyHeader()} ;
-
-            function stickyHeader(){
-                if(document.documentElement.scrollTop > 60){
-                    nav.className = "nav sticky";
-                    blank.className = "blank show";
-                }else{
-                    nav.className = "nav";
-                    blank.className = "blank";
-                }
-            }
-        </script>
-    </body>
+   
+   <!-- JavaScript -->
+   <script src="index.js"></script>
+</body>
 </html>
